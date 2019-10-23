@@ -20,9 +20,9 @@
            "{{mp_arn}}"{% if not loop.last %},{% endif %}
           {% endfor %}
         ],
-        "Path": "{{ iamrole.iam_role_path|default(iam_role_path) }}",
+        "Path": "{{ iamrole.iam_role_path|default(iam_role_path) }}"
         {% if iamrole.iam_role_name is defined %}
-        "RoleName": "{{ iamrole.iam_role_name }}"
+        , "RoleName": "{{ iamrole.iam_role_name }}"
         {% endif %}
       }
     }
