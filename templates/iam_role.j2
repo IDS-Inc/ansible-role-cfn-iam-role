@@ -21,7 +21,9 @@
           {% endfor %}
         ],
         "Path": "{{ iamrole.iam_role_path|default(iam_role_path) }}",
-        "RoleName": "{{ iamrole.iam_role_name|default(omit) }}"
+        {% if iamrole.iam_role_name is defined %}
+        "RoleName": "{{ iamrole.iam_role_name }}"
+        {% endif %}
       }
     }
     {% if not loop.last %},{% endif %}
