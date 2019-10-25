@@ -17,3 +17,4 @@ iam_roles:
   - name: RoleName
     profile_name: ProfileName
     iam_role_path: "{{ iam_role_path }}"
+    iam_role_name: "{{ iam_role_name }}"
